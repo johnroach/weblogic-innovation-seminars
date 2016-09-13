@@ -1,0 +1,51 @@
+opc.base.url=jaas.oraclecloud.com
+# Enter your cloud credential here, after you did the modification, you need to rename this file to environment.properties
+opc.identity.domain=paasdemo015
+opc.username=demouser
+opc.password=P@aS2016
+
+# Storage information
+# Check your generic storage url - see documentation
+opc.storage.generic.url=storage.oraclecloud.com
+# The name of the container to use by Database and Java Cloud Services
+opc.storage.container=wins_container
+
+# SSH key details
+# first you need to create your SSH key pair. Use example Putty's Keygen tool - see documentation
+ssh.user=opc
+# public ssh key in the following format, copy the public key value from winsmt.pub file which is inside the MT-Workshop folder
+ssh.public.key=ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCC0stNsg57cQJ9bbFN5Vw2A5cF2GI4nQR2meODQiEwP8Cw/LQfVbSWw0BRAjRthQ6E+ulWx2EuCkca3st2n0OySj6+g6W6Zp1/NiO58ARim56lkuZMdjM5DrhueVeZcaVW5TVBCMNQsKF6tM6Deojgzs9NR/vbafHBma0MOMUQsnRq78x78MaFAEemYYlaCjK4USZ+O+w96yr9U1QDIAD2CDSTNCWRVS6gDWHanekRrpyYlhWs0KItHXdHiQNutwDLJ3xXuLHp6TcqRcmoGqVlOMOBVPMYKh11AE5p4knwqexTq9vn8/wGt3/2SUJCgc9Ut72Mun5pkhFuVJE1+pN1 rsa-key-20160908091508
+
+ssh.passphrase=weblogic
+
+#the name of the private key file located in 'cloud.demos' folder
+ssh.privatekey=pk.openssh
+
+# JCS details
+jcs.base.url=jaas.oraclecloud.com
+jcs.rest.url=/paas/service/jcs/api/v1.1/instances/
+jcs.instance.version.1=12.2.1
+jcs.instance.otd.1=false
+jcs.instance.1=winsdemoWLS
+jcs.instance.desc.1=winsdemo instance through REST
+jcs.instance.partition.1=1
+jcs.instance.admin.user.1=weblogic
+jcs.instance.admin.password.1=welcome1
+
+# DBCS details
+dbcs.base.url=dbaas.oraclecloud.com
+dbcs.rest.url=/paas/service/dbcs/api/v1.1/instances/
+dbcs.instance.version.1=12.1.0.2
+dbcs.instance.1=winsdemo
+dbcs.instance.sid.1=ORCL
+dbcs.instance.pdb1.1=PDB1
+dbcs.instance.pdb2.1=PDB2
+dbcs.instance.desc.1=winsdemo db instance through REST
+dbcs.instance.usable.storage.1=25
+# DEMOS will be an additional pluggable database with the service name: DEMOS.{identity-domain}.oraclecloud.internal
+# If DEMOS required DBCS storage must be larger than 25GB
+# You need to enable demo users/schemas explicitly after provisioning
+dbcs.instance.demos.1=yes
+
+dbcs.dba.name=sys
+dbcs.dba.password=Welcome_1
